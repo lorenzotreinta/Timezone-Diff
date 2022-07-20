@@ -2,7 +2,7 @@ import { Controller, Post, Get, Body, Param} from "@nestjs/common";
 import { TimeService } from "./time.service";
 import { BadRequestException } from "@nestjs/common";
 
-
+//TODO: Move all controller files in their own folder (including tests)
 @Controller('time')
 export class TimeController {
     constructor(private readonly timeService: TimeService) {}

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1658185651440" clover="3.2.0">
-  <project timestamp="1658185651440" name="All files">
-    <metrics statements="71" coveredstatements="55" conditionals="4" coveredconditionals="2" methods="16" coveredmethods="15" elements="91" coveredelements="72" complexity="0" loc="71" ncloc="71" packages="2" files="7" classes="7"/>
+<coverage generated="1658265790268" clover="3.2.0">
+  <project timestamp="1658265790268" name="All files">
+    <metrics statements="71" coveredstatements="57" conditionals="4" coveredconditionals="4" methods="16" coveredmethods="15" elements="91" coveredelements="76" complexity="0" loc="71" ncloc="71" packages="2" files="7" classes="7"/>
     <package name="src">
       <metrics statements="19" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="3"/>
       <file name="app.controller.ts" path="/Users/lorenzoahn/Desktop/Projects/ProSpotify/Timezone-Diff/time-diff/src/app.controller.ts">
@@ -37,15 +37,15 @@
       </file>
     </package>
     <package name="src.time">
-      <metrics statements="52" coveredstatements="46" conditionals="4" coveredconditionals="2" methods="12" coveredmethods="12"/>
+      <metrics statements="52" coveredstatements="48" conditionals="4" coveredconditionals="4" methods="12" coveredmethods="12"/>
       <file name="time.controller.ts" path="/Users/lorenzoahn/Desktop/Projects/ProSpotify/Timezone-Diff/time-diff/src/time/time.controller.ts">
         <metrics statements="11" coveredstatements="11" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="4"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
         <line num="7" count="1" type="stmt"/>
-        <line num="8" count="6" type="stmt"/>
+        <line num="8" count="8" type="stmt"/>
         <line num="12" count="1" type="stmt"/>
-        <line num="16" count="7" type="stmt"/>
+        <line num="16" count="9" type="stmt"/>
         <line num="17" count="7" type="stmt"/>
         <line num="21" count="1" type="stmt"/>
         <line num="22" count="1" type="stmt"/>
@@ -60,18 +60,18 @@
         <line num="10" count="0" type="stmt"/>
       </file>
       <file name="time.service.ts" path="/Users/lorenzoahn/Desktop/Projects/ProSpotify/Timezone-Diff/time-diff/src/time/time.service.ts">
-        <metrics statements="37" coveredstatements="35" conditionals="4" coveredconditionals="2" methods="8" coveredmethods="8"/>
+        <metrics statements="37" coveredstatements="37" conditionals="4" coveredconditionals="4" methods="8" coveredmethods="8"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
         <line num="5" count="1" type="stmt"/>
-        <line num="7" count="6" type="stmt"/>
-        <line num="11" count="7" type="stmt"/>
-        <line num="12" count="7" type="stmt"/>
-        <line num="13" count="7" type="cond" truecount="2" falsecount="1"/>
-        <line num="14" count="0" type="stmt"/>
-        <line num="16" count="7" type="stmt"/>
-        <line num="17" count="7" type="cond" truecount="0" falsecount="1"/>
-        <line num="18" count="0" type="stmt"/>
+        <line num="7" count="8" type="stmt"/>
+        <line num="11" count="9" type="stmt"/>
+        <line num="12" count="9" type="stmt"/>
+        <line num="13" count="9" type="cond" truecount="3" falsecount="0"/>
+        <line num="14" count="1" type="stmt"/>
+        <line num="16" count="8" type="stmt"/>
+        <line num="17" count="8" type="cond" truecount="1" falsecount="0"/>
+        <line num="18" count="1" type="stmt"/>
         <line num="20" count="7" type="stmt"/>
         <line num="25" count="1" type="stmt"/>
         <line num="30" count="1" type="stmt"/>

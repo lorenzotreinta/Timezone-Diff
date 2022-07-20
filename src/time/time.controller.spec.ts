@@ -31,13 +31,21 @@ describe('TimeController', () => {
     it('should be \"3652T05:05:05.050\"', () => {
       expect(timeController.calculateTimeDiff("1970-01-01T12:00", "1980-01-01T17:05:05.050")).toBe("3652T05:05:05.050")
     });
-    // TODO: Fix error cases
-    // it('should return error', () => {
-    //   expect(timeController.calculateTimeDiff("1970-01-01T12:00", "1920-01-01T12:00")).toThrow()
+    //TODO: Add timezone test
+    // it('should be \"\"', () => {
+    //   expect(timeController.calculateTimeDiff("1970-01-01T12:00", "1970-01-01T12:00+02:00")).toBe("3652T05:05:05.050")
     // });
-    // it('should return error', () => {
-    //   expect(timeController.calculateTimeDiff("1970-15", "1920-01-01T12:00")).toThrow("BadRequestException");
-    // });
+    test('BadRequestException: Start date or end date is not in ISO8601 format.', () => {
+      expect(() => {
+        timeController.calculateTimeDiff("1970-15", "1920-01-01T12:00");
+      }).toThrow();
+    });
+    test('BadRequestException: End date must be greater than or equal to start date.', () => {
+      expect(() => {
+        timeController.calculateTimeDiff("1970-01-01T12:00", "1920-01-01T12:00");
+      }).toThrow();
+    });
+
   });
 
   it('should be \"0T00:00:00.000\"', () => {

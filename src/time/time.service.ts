@@ -1,6 +1,7 @@
 import { Injectable } from "@nestjs/common";
 import { BadRequestException } from "@nestjs/common";
 
+// TODO: change TimeService name to something more descriptive (e.g. TimeDifferenceCalculatorService)
 @Injectable()
 export class TimeService {
     // Stores time diffs in ms into a sorted array
@@ -8,6 +9,7 @@ export class TimeService {
 
     // Gets the time diff of two dates in ISO8601 format in ms
     getTimeDiff(str_start_date: string, str_end_date: string): string {
+        //TODO: Check that all params are there
         const start_date = new Date(str_start_date);
         const end_date = new Date(str_end_date);
         if (!start_date.valueOf() || !end_date.valueOf()) { 
@@ -17,6 +19,7 @@ export class TimeService {
         if (diff < 0) {
             throw new BadRequestException("End date must be greater than or equal to start date.")
         }
+        // TODO: Avoid one liners to increase readability
         return this.msToISO(this.storeTimeDiff(diff));
     }
 
@@ -32,6 +35,7 @@ export class TimeService {
 
     // Pushes the time diff into the array and sorts it
     private storeTimeDiff(diff: number): number {
+        // TODO: do not return anything. Exception if there's an error.
         this.time_diffs.push(diff);
         this.time_diffs.sort((n1,n2) => n1 - n2);
         return diff;

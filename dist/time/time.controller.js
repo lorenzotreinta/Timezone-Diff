@@ -15,20 +15,13 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.TimeController = void 0;
 const common_1 = require("@nestjs/common");
 const time_service_1 = require("./time.service");
-const common_2 = require("@nestjs/common");
 let TimeController = class TimeController {
     constructor(timeService) {
         this.timeService = timeService;
     }
     calculateTimeDiff(start_date, end_date) {
-        if (typeof start_date !== "string" || typeof end_date !== "string") {
-            throw new common_2.BadRequestException("dates must be string in ISO 8601 format");
-        }
         const time_diff = this.timeService.getTimeDiff(start_date, end_date);
         return time_diff;
-    }
-    getStored() {
-        return this.timeService.getStored();
     }
     getSmallestDiff() {
         return this.timeService.getSmallestDiff();
@@ -45,12 +38,6 @@ __decorate([
     __metadata("design:paramtypes", [String, String]),
     __metadata("design:returntype", String)
 ], TimeController.prototype, "calculateTimeDiff", null);
-__decorate([
-    (0, common_1.Get)(),
-    __metadata("design:type", Function),
-    __metadata("design:paramtypes", []),
-    __metadata("design:returntype", void 0)
-], TimeController.prototype, "getStored", null);
 __decorate([
     (0, common_1.Get)('smallest'),
     __metadata("design:type", Function),

@@ -31,13 +31,6 @@ let TimeService = class TimeService {
     getLargestDiff() {
         return this.msToISO([...this.time_diffs][this.time_diffs.length - 1]);
     }
-    getStored() {
-        return [...this.time_diffs];
-    }
-    toDate(iso_str) {
-        const date = new Date(iso_str);
-        return date;
-    }
     storeTimeDiff(diff) {
         this.time_diffs.push(diff);
         this.time_diffs.sort((n1, n2) => n1 - n2);
@@ -49,23 +42,18 @@ let TimeService = class TimeService {
         const min_in_hr = 60;
         const hr_in_day = 24;
         let diff_temp = diff;
-        console.log(diff_temp);
         let ms = diff_temp % ms_in_sec;
         diff_temp -= ms;
         diff_temp = diff_temp / ms_in_sec;
-        console.log(diff_temp);
         let sec = diff_temp % sec_in_min;
         diff_temp -= sec;
         diff_temp = diff_temp / sec_in_min;
-        console.log(diff_temp);
         let min = diff_temp % min_in_hr;
         diff_temp -= min;
         diff_temp = diff_temp / min_in_hr;
-        console.log(diff_temp);
         let hr = diff_temp % hr_in_day;
         diff_temp -= hr;
         diff_temp = diff_temp / hr_in_day;
-        console.log(diff_temp);
         let day = diff_temp;
         return (`${day}T${this.addLeadingZeros(hr, 2)}:${this.addLeadingZeros(min, 2)}:${this.addLeadingZeros(sec, 2)}.${this.addLeadingZeros(ms, 3)}`);
     }
