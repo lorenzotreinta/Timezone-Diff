@@ -1,10 +1,10 @@
 import { Module } from "@nestjs/common";
-import { TimeService } from "./time.service";
-import { TimeController } from "./time.controller";
+import { TimeDifferenceCalculatorService } from "./time.service";
+import { TimeDifferenceCalculatorController } from "./controllers/time.controller";
 
 @Module({
     imports: [],
-    controllers: [TimeController],
-    providers: [TimeService]
+    controllers: [TimeDifferenceCalculatorController],
+    providers: [TimeDifferenceCalculatorService]
 })
 export class TimeModule{};
